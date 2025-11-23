@@ -8,6 +8,17 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 // Add services to the container.
 
 // Database
@@ -91,6 +102,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAll");
+app.UseDefaultFiles();
+app.UseStaticFiles(); 
+// app.UseHttpsRedirection();
 
 app.UseHttpsRedirection();
 
