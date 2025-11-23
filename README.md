@@ -1,5 +1,11 @@
 # Aspnet_FinalExam
 
+## 📝🔗 Link đề bài
+
+```
+https://www.notion.so/thi-cu-i-k-L-p-tr-nh-Back-end-V-a-2b0e9f0ef23c811e82e8d589eef0bfad?source=copy_link
+```
+
 ## 🚀 Cài đặt packages
 
 ```
